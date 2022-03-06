@@ -1,0 +1,33 @@
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin wrapper {
+  width: 82%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin pure-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin max-text-lines($line-height, $line-count) {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: ($line-height * $line-count) + em;
+  line-height: $line-height + em;
+}
+

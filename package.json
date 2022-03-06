@@ -8,6 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.0.0",
+    "@fortawesome/vue-fontawesome": "^3.0.0-5",
+    "axios": "^0.26.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
@@ -42,8 +46,18 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": [
+        "error",
+        {
+          "ignores": [
+            "index", "ui"
+          ]
+        }
+      ]
+    }
   },
+  "vue": {},
   "browserslist": [
     "> 1%",
     "last 2 versions",
