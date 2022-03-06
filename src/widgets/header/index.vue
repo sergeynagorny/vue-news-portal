@@ -2,13 +2,18 @@
   <header class="header">
     <ui-logo></ui-logo>
     <div class="header__controls">
-      <ui-button v-if="withSearch" icon="search" type="ghost"></ui-button>
+      <posts-search v-if="withSearch"></posts-search>
     </div>
   </header>
 </template>
 
 <script>
+import PostsSearch from "@/features/posts-search";
+
 export default {
+  components: {
+    PostsSearch,
+  },
   props: {
     withSearch: {
       type: Boolean,
