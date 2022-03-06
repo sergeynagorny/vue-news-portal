@@ -17,6 +17,7 @@ export default {
 .logo {
   display: inline-block;
   user-select: none;
+  white-space: nowrap;
 
   font-size: 16px;
   font-weight: bold;

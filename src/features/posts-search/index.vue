@@ -1,16 +1,19 @@
 <template>
-  <input
-    v-focus
-    v-if="isSearchVisible"
-    v-model="searchQuery"
-    @input="setSearchQuery(searchQuery)"
-    placeholder="Search something..."
-  />
-  <ui-button
-    :icon="isSearchVisible ? 'close' : 'search'"
-    @click="toggleSearch"
-    type="ghost"
-  ></ui-button>
+  <div class="post-search">
+    <input
+      v-focus
+      v-if="isSearchVisible"
+      v-model="searchQuery"
+      @input="setSearchQuery(searchQuery)"
+      placeholder="Search..."
+      class="post-search__input"
+    />
+    <ui-button
+      :icon="isSearchVisible ? 'close' : 'search'"
+      @click="toggleSearch"
+      type="ghost"
+    ></ui-button>
+  </div>
 </template>
 
 <script>
@@ -32,3 +35,14 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.post-search {
+  display: flex;
+  gap: 5px;
+
+  .post-search__input {
+    max-width: 100px;
+  }
+}
+</style>
